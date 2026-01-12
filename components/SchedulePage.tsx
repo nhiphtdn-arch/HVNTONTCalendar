@@ -17,6 +17,7 @@ const SchedulePage: React.FC<SchedulePageProps> = ({ events, settings, initialBr
     search: '',
     city: '',
     brand: '',
+    bu: '', // Initialize bu filter
     dateFrom: '',
     dateTo: ''
   });
@@ -46,6 +47,7 @@ const SchedulePage: React.FC<SchedulePageProps> = ({ events, settings, initialBr
       search: '',
       city: '',
       brand: '',
+      bu: '', // Reset bu filter
       dateFrom: '',
       dateTo: ''
     });
@@ -103,6 +105,9 @@ const SchedulePage: React.FC<SchedulePageProps> = ({ events, settings, initialBr
     }
     if (filters.city) {
       result = result.filter(e => e.city === filters.city);
+    }
+    if (filters.bu) {
+      result = result.filter(e => e.bu === filters.bu);
     }
     if (filters.brand) {
       result = result.filter(e => e.brand === filters.brand);

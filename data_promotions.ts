@@ -11,61 +11,10 @@ import { Promotion } from './types';
 // ="{ id: 'promo-" & TEXT(F2,"yymmdd") & "-r" & ROW() & "', title: '" & SUBSTITUTE(SUBSTITUTE(D2, CHAR(10), " "), "'", "\'") & "', brand: '" & B2 & "', type: '" & C2 & "', regions: ['" & E2 & "'], cities: [], startDate: '" & TEXT(F2,"yyyy-mm-dd") & "', endDate: '" & TEXT(G2,"yyyy-mm-dd") & "', image: '" & H2 & "', mobileImage: '" & I2 & "', bu: '" & E2 & "', venueListLink: '" & J2 & "', content: '" & SUBSTITUTE(SUBSTITUTE(K2, CHAR(10), "\n"), "'", "\'") & "' },"
 
 export const PROMOTION_DATA: Promotion[] = [
-{ 
-  id: 'promo-251201-r2', 
-  title: 'Tiger Festive - Săn Lộc Bản Lĩnh', 
-  brand: 'Tiger', 
-  type: 'Activation', 
-  image: 'https://i.postimg.cc/1XVz7F9k/Tiger_Festive_Activation.jpg', 
-  mobileImage: 'https://i.postimg.cc/yN1YxV48/KV-Tiger-Festive-9-16-VER-001.jpg', 
-  startDate: '2025-12-01', 
-  endDate: '2026-03-31', 
-  regions: ['NTW'],
-  cities: ['Hà Nội', 'Hải Phòng'],
-  bu: 'NTW',
-  content: `Mùa Tết năm nay, Tiger mang đến một hành trình hoàn toàn mới: “ĐÁNH THỨC BẢN LĨNH – SĂN LỘC KHAI XUÂN.”` 
-},
-{ 
-  id: 'promo-251201-r3', 
-  title: 'Heineken Festive - Mở kết nối thật, Tết bật Heineken', 
-  brand: 'Heineken', 
-  type: 'Activation', 
-  image: 'https://i.postimg.cc/W3VKT4Qd/Design-Manual-TONT-Heineken-Festive-Proposal-Oct17th.png', 
-  mobileImage: 'https://i.postimg.cc/X7qyMZvh/z7322898858598_3b4c2214f224ab8c4cc5d9e9e58b39ab.jpg', 
-  startDate: '2025-12-01', 
-  endDate: '2026-03-31', 
-  regions: ['NTW'],
-  cities: ['Hà Nội', 'Đà Nẵng'],
-  bu: 'NTW',
-  content: `Tham gia ngay chuỗi sự kiện Heineken để trải nghiệm hương vị bia thượng hạng...` 
-},
-{ 
-  id: 'promo-260101-r4', 
-  title: 'Tiger YEP - Lên Tiệc cùng Tiger', 
-  brand: 'Tiger', 
-  type: 'AWO', 
-  image: 'https://i.postimg.cc/vZkcm4LG/Anh-chup-man-hinh-2025-12-24-023704.png', 
-  mobileImage: 'https://i.postimg.cc/NfQTh2pr/Anh-chup-man-hinh-2025-12-24-023505.png', 
-  startDate: '2026-01-01', 
-  endDate: '2026-04-15', 
-  regions: ['GHCM'],
-  cities: [],
-  bu: 'GHCM',
-  venueListLink: 'https://maps.app.goo.gl/TzNCwhxrbuShG3yq7', 
-  content: `Thời gian diễn ra: 01/01/2026 – 15/04/2026...` 
-},
-{ 
-  id: 'promo-250801-r5', 
-  title: 'Tiger SP Kitset', 
-  brand: 'Tiger', 
-  type: 'AWO', 
-  image: '', 
-  mobileImage: '', 
-  startDate: '2025-08-01', 
-  endDate: '2025-12-15', 
-  regions: ['GHCM'],
-  cities: [],
-  bu: 'GHCM',
-  content: `Khui 6 Tiger 100% nhận quà` 
-},
+{ id: 'promo-251201-r2', title: 'Tiger Festive - Săn Lộc Bản Lĩnh', brand: 'Tiger', type: 'Activation', regions: ['GHCM,NO,CE,MKD'], cities: [], startDate: '2025-12-01', endDate: '2026-03-31', image: 'https://i.postimg.cc/mrsqG386/Cover-ngang.jpg', mobileImage: 'https://i.postimg.cc/1tWY6kPK/Cover-doc.jpg', bu: 'GHCM,NO,CE,MKD', venueListLink: 'N/A', content: 'Mùa Tết năm nay, Tiger mang đến một hành trình hoàn toàn mới:\n “ĐÁNH THỨC BẢN LĨNH – SĂN LỘC KHAI XUÂN.”\n \n Tại Điểm Hẹn Săn Lộc, các mãnh hổ sẽ được mở khóa hàng loạt trải nghiệm đậm tinh thần Tết, đậm màu sắc Tiger!\n Hôm nay, Tiger không chỉ chúc lộc,\n Tiger trao lộc.\n Tiger khơi dậy lộc từ chính bản lĩnh của các mãnh hổ.' },
+{ id: 'promo-251201-r3', title: 'Heineken Festive - Mở kết nối thật, Tết bật Heineken', brand: 'Heineken', type: 'Activation', regions: ['GHCM,NO,CE,MKD'], cities: [], startDate: '2025-12-01', endDate: '2026-03-31', image: 'https://i.postimg.cc/W3VKT4Qd/Design-Manual-TONT-Heineken-Festive-Proposal-Oct17th.png', mobileImage: 'https://i.postimg.cc/X7qyMZvh/z7322898858598_3b4c2214f224ab8c4cc5d9e9e58b39ab.jpg', bu: 'GHCM,NO,CE,MKD', venueListLink: 'N/A', content: 'MỞ KẾT NỐI THẬT – TẾT BẬT HEINEKEN\n\nTết đang đến gần — thời khắc để gác lại những “tín hiệu ảo”, cùng bật cảm xúc thật bên người thân và bạn bè.\nHeineken mời bạn đến điểm hẹn của những kết nối thật, nơi âm nhạc, niềm vui và những ly bia mát lạnh hòa cùng không khí rộn ràng cuối năm\n\n• Order 6 lon / chai Heineken bất kỳ → nhận 1 lượt chơi game TRÚNG QUÀ 100% (Túi tole, Bình Giữ nhiệt, Áo Polo, Gifbox Alu…)\n\n• Và cứ mỗi combo 6 Heineken → nhận ngay 1 vòng tay may mắn để tham gia Lucky Draw với các phần thưởng giá trị như: \n   Giải Nhất: Tai nghe Bluetooth Apple AirPods 4\n   Giải Đặc Biệt: Loa Heineken Marshall Action III\n\nHãy cùng mở kết nối thật   – bật niềm vui và khui mùa Tết thật đáng nhớ cùng Heineken! 🍻' },
+{ id: 'promo-251208-r4', title: 'Larue Festive Activation 2025\'2026', brand: 'Larue', type: 'Activation', regions: ['MKD,CE'], cities: [], startDate: '2025-12-08', endDate: '2026-02-08', image: 'https://i.postimg.cc/28q106NM/Anh-man-hinh-2025-12-18-luc-19-47-13.jpg', mobileImage: 'https://i.postimg.cc/wBkM1RDC/Anh-man-hinh-2026-01-05-luc-13-37-33.jpg', bu: 'MKD,CE', venueListLink: 'N/A', content: 'CƠ HỘI ĐÓN ĐIỀU MỚI, TẤN TỚI NĂM BÍNH NGỌ 2026 CÙNG LARUE\n🎁 100% TRÚNG QUÀ – 1000% VUI HẾT MÌNH\n\nMột đêm duy nhất với không khí rộn ràng, quà tặng bùng nổ, mở lối cho một năm mới đủ đầy từ SỰ NGHIỆP - TÌNH DUYÊN - TÀI LỘC & SỨC KHOẺ\n🔥 Cách tham gia nhận quà:\n\n• Order 6 chai Larue bất kỳ → nhận 1 lượt chơi game TRÚNG QUÀ 100% (Nón, Bật lửa, Túi đeo chéo, Giftbox Tết…)\n\n•Và cứ mỗi combo 6 Larue → nhận ngay 1 vòng tay may mắn để tham gia Lucky Draw với các phần thưởng giá trị như: Smart Tivi 43 inch, Máy ép chậm, Thùng bia Larue Smooth\n' },
+{ id: 'promo-251218-r5', title: 'Bia Việt Festive Activation 2025\'26', brand: 'Bia Việt', type: 'Activation', regions: ['SE,SW'], cities: [], startDate: '2025-12-18', endDate: '2026-01-31', image: 'https://i.postimg.cc/mkNKwbMx/z7400015356953-676f15eb7da68dc57c4b18b5108abf5c.jpg', mobileImage: 'https://i.postimg.cc/cJvySGqt/z7400114250586-1c3e0cc82d9122ea768aa3514413c415.jpg', bu: 'SE,SW', venueListLink: 'N/A', content: 'Cuối năm là lúc nâng ly Bia Việt để nói lời CẢM ƠN CHÂN THÀNH tới những người đã kề vai sát cánh suốt một năm qua. \nĐêm tiệc “CẢM ƠN CHÂN THÀNH” cùng Bia Việt chính là lời tri ân - hứa hẹn một đêm bia ngon, quà chất, vui cháy hết mình\n🍻 Bia Việt mát lạnh hết nấc\n🎵 Không khí rộn ràng, game cháy hết mình\n🎁 Quà tặng mang về đầy tay - cảm ơn anh em thật đậm sâu\n\n🎊Một đêm duy nhất để anh em quây quần, cụng ly và nhận quà đặc biệt từ Bia Việt:\n• Order combo 6 lon/chai Bia Việt bất kỳ → nhận 1 lượt chơi game tại bàn hoặc 1 lượt hái lộc có cơ hội nhận những phần quà hấp dẫn: Bộ ly festive 2026, túi du lịch Bia Việt, bật lửa Bia Việt\n• Với combo 6 lon/chai → nhận ngay phiếu bốc thăm may mắn với nhiều phần quà giá trị: loa Karaoke, quạt điều hòa, giỏ quà tết 2026, bếp điện từ' },
+
+
 ];

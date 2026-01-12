@@ -1,3 +1,4 @@
+
 export interface ProgramEvent {
   id: string;
   city: string;
@@ -80,6 +81,7 @@ export interface FilterState {
   brand: string;
   dateFrom: string;
   dateTo: string;
+  bu?: string; // Added optional bu field
 }
 
 export type View = 'home' | 'schedule' | 'awo-schedule' | 'program-detail' | 'program-list';

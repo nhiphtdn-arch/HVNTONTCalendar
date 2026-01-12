@@ -51,10 +51,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, setCurrentView, settings, 
               alt="Heineken Vietnam" 
               className="h-10 md:h-12 w-auto object-contain"
             />
-            <h1 className="text-lg md:text-xl font-bold tracking-tight hidden xs:block">
-              <span className="text-green-700">HVN</span>
-              <span className="text-gray-900">TONT</span>
-            </h1>
+            <h1 className="text-lg md:text-xl font-bold tracking-tight flex items-center gap-1">
+  <span className="text-green-700">HVN</span>
+  <span className="text-gray-900">TONT</span>
+  <span className="text-gray-900 hidden sm:inline-block">CALENDAR</span>
+</h1>
           </div>
 
           {/* Desktop Menu */}
