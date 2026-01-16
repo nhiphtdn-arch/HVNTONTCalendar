@@ -190,9 +190,20 @@ const EventTable: React.FC<EventTableProps> = ({ events, sortConfig, onSort, lan
                       </div>
                     </td>
                     <td className="px-2 py-2 sm:px-6 sm:py-4">
-                      <a href={event.mapLink || '#'} target="_blank" rel="noopener noreferrer" className={`text-[11px] md:text-base truncate block max-w-[120px] sm:max-w-xs ${past ? 'text-gray-400' : 'text-blue-500 hover:underline'}`}>
-                        {event.address}
-                      </a>
+                      {event.mapLink ? (
+                        <a 
+                          href={event.mapLink} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className={`text-[11px] md:text-base truncate block max-w-[120px] sm:max-w-xs ${past ? 'text-gray-400' : 'text-blue-500 hover:underline'}`}
+                        >
+                          {event.address}
+                        </a>
+                      ) : (
+                        <span className={`text-[11px] md:text-base truncate block max-w-[120px] sm:max-w-xs ${past ? 'text-gray-400' : 'text-gray-900'}`}>
+                          {event.address}
+                        </span>
+                      )}
                     </td>
                   </tr>
                 );
