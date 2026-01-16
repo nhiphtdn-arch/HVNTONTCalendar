@@ -20,7 +20,8 @@ export interface ProgramEvent {
 }
 
 export type ProgramType = 'Activation' | 'AWO';
-export type Region = 'NTW' | 'GHCM' | 'CE' | 'NO' | 'MKD';
+// Added 'SE' and 'SW' to Region type to match promotion and event data
+export type Region = 'NTW' | 'GHCM' | 'CE' | 'NO' | 'MKD' | 'SE' | 'SW';
 
 export interface Promotion {
   id: string;

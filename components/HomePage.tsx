@@ -66,7 +66,7 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentView, settings, onSelectP
                 <source media="(max-width: 768px)" srcSet={promo.mobileImage || promo.image} />
                 <img src={promo.image} alt={promo.title} className="w-full h-full object-cover" />
             </picture>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
             
             <div className="absolute bottom-16 left-0 w-full px-6 max-w-7xl mx-auto">
                 <span className="inline-block px-4 py-1.5 bg-green-600 text-white text-xs font-bold rounded-full mb-4 uppercase">{promo.brand}</span>
