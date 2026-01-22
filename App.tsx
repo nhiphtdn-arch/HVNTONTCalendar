@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import SchedulePage from './components/SchedulePage';
@@ -42,6 +42,10 @@ function App() {
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'vi' ? 'en' : 'vi');
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentView]);
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
