@@ -201,7 +201,7 @@ const ProgramListPage: React.FC<ProgramListPageProps> = ({ promotions, onSelectP
         )}
       </div>
     </div>
-  ;
+  );
 };
 
 export default ProgramListPage;
