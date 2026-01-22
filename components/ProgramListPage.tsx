@@ -75,7 +75,7 @@ const ProgramListPage: React.FC<ProgramListPageProps> = ({ promotions, onSelectP
     return 'bg-blue-600';
   };
 
-  const ProgramCard = ({ promo, isPast }: { promo: Promotion, isPast?: boolean }) => (
+  const ProgramCard = ({ promo, isPast }: { promo: Promotion; isPast?: boolean }) => (
     <div 
         key={promo.id} 
         onClick={() => onSelectProgram(promo.id)} 
@@ -83,7 +83,6 @@ const ProgramListPage: React.FC<ProgramListPageProps> = ({ promotions, onSelectP
     >
         <div className="relative h-48 overflow-hidden">
             <picture className="w-full h-full">
-                <source media="(max-width: 640px)" srcSet={promo.mobileImage || promo.image} />
                 <img src={promo.image} alt={promo.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </picture>
             <div className="absolute top-4 left-4 flex gap-2">
@@ -138,7 +137,7 @@ const ProgramListPage: React.FC<ProgramListPageProps> = ({ promotions, onSelectP
                         type="text" 
                         placeholder={t.searchPlaceholder}
                         value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                         className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-transparent rounded-xl focus:bg-white focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all text-sm"
                     />
                 </div>
@@ -147,7 +146,7 @@ const ProgramListPage: React.FC<ProgramListPageProps> = ({ promotions, onSelectP
                     <Filter className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                     <select 
                         value={filterRegion}
-                        onChange={(e) => setFilterRegion(e.target.value as any)}
+                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setFilterRegion(e.target.value as Region | 'All')}
                         className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-transparent rounded-xl focus:bg-white focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none appearance-none text-sm cursor-pointer"
                     >
                         <option value="All">{t.allRegions}</option>
@@ -177,6 +176,7 @@ const ProgramListPage: React.FC<ProgramListPageProps> = ({ promotions, onSelectP
             {activePrograms.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {activePrograms.map(promo => <ProgramCard promo={promo} />)}
+                )
                 </div>
             ) : (
                 <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-10 text-center text-gray-400">
