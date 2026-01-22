@@ -176,7 +176,7 @@ const ProgramListPage: React.FC<ProgramListPageProps> = ({ promotions, onSelectP
             {activePrograms.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {activePrograms.map(promo => <ProgramCard promo={promo} />)}
-                )
+                
                 </div>
             ) : (
                 <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-10 text-center text-gray-400">
@@ -201,7 +201,7 @@ const ProgramListPage: React.FC<ProgramListPageProps> = ({ promotions, onSelectP
         )}
       </div>
     </div>
-  );
+  ;
 };
 
 export default ProgramListPage;
