@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import SchedulePage from './components/SchedulePage';
@@ -104,6 +105,7 @@ function App() {
             />
         )}
       </main>
+      <Analytics />
     </div>
   );
 }
